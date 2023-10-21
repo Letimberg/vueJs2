@@ -1,0 +1,43 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<style>
+    .p {
+        width: 30px;
+        height: 20px;
+        text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: green;
+        border-radius: 5px 5px 5px 5px;
+    }
+    .r {
+        width: 120px;
+        height: 20px;
+        text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: green;
+        border-radius: 5px 5px 5px 5px;
+    }
+</style>
+
+<div id="app">
+    <p class="p">{{ contador }}</p>
+    <p class="r">{{ contador > 10 ? 'Maior do que 10' : 'Menor do que 10' }}</p>
+    <button v-on:click="somar">Somar 1</button>
+    </p>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            contador: 0,
+        },
+        methods: {
+            somar() {
+                this.contador++
+            },
+        }
+    })
+</script>

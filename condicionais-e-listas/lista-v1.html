@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+<script src="https://unpkg.com/vue"></script>
+
+<div id="app">
+    <ul>
+        <li v-for="cor in cores">
+            {{ cor }}
+        </li>
+    </ul>
+</div>
+
+<div id="app2">
+    <ul>
+        <li v-for="pessoa in pessoas" :key="pessoa.pessoas">
+            {{ pessoa.nome}}
+        </li>
+    </ul>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [{
+                    nome: 'Prips',
+                    idade: '26',
+                    peso: '59'
+                },
+                {
+                    nome: 'Ligeirinho',
+                    idade: '67',
+                    peso: '10'
+                }
+            ]
+        }
+    })
+
+    new Vue({
+        el: '#app2',
+        data: {
+            cores: ['vermelho', 'verde', 'amarelo', 'azul'],
+            pessoas: [{
+                    nome: 'Prips',
+                    idade: '26',
+                    peso: '59'
+                },
+                {
+                    nome: 'Ligeirinho',
+                    idade: '67',
+                    peso: '10'
+                }
+            ]
+        }
+    })
+</script>
